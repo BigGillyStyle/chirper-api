@@ -2,7 +2,7 @@ var controllers = require('./controllers/.index');
 var actions = require('./actions/.index');
 
 module.exports = function(app) {
-  
+
   // User
   app.route('/users')
     .get(controllers.user.list)
@@ -29,5 +29,13 @@ module.exports = function(app) {
     .get(controllers.follow.load)
     .put(controllers.follow.update)
     .delete(controllers.follow.remove);
+
+  // Signup
+  app.post('/signup', actions.signup);
+
+  // Login
+  app.post('/login', actions.login);
+
+  app.post('/token', actions.login);
 
 };
