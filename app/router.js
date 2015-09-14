@@ -38,4 +38,10 @@ module.exports = function(app) {
 
   app.post('/token', actions.login);
 
+  // Follow
+  app.post('/follow', actions.follow);
+
+  // Unfollow
+  app.post('/unfollow', actions.unfollow);
+
 };

@@ -52,7 +52,7 @@ module.exports = function(sequelize, DataTypes) {
            as: 'followees',
            through: models.follow,
            foreignKey: 'follower_id',
-           otherKey: 'folowee_id'
+           otherKey: 'followee_id'
          });
 
          models.user.belongsToMany(models.user, {
